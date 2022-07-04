@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tailwind-angular-v3';
+  mostrarMensaje() {
+    alert('Hola mundo');
+  }
 }
