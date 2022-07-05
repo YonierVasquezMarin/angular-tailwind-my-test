@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 @layer components {
+
+  .title {
+    @apply text-2xl mb-5;
+  }
+
   .btn-primary {
     @apply inline-block px-6 py-2.5 bg-green-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg;
   }
+
 }
 
