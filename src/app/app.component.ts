@@ -5,8 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  mostrarMensaje() {
-    alert('Hola mundo');
-  }
-}
+export class AppComponent { }
