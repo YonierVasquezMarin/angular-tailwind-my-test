@@ -17,8 +17,7 @@
   }
 
   .btn {
-    @apply inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md;
+    @apply inline-block px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded shadow-md bg-green-500 hover:bg-green-600 active:bg-green-700;
   }
 
 }
-
