@@ -14,8 +14,8 @@ export class AuthService {
     return this.localStorageService.userIsLoggedIn();
   }
 
-  logginUser(user: any): void {
-    this.localStorageService.logginUser(user);
+  loginUser(user: any): void {
+    this.localStorageService.loginUser(user);
   }
 
   logoutUser(): void {
