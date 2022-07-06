@@ -5,7 +5,7 @@ import { HomeComponent } from './modules/main/home/home.component';
 import { LoginComponent } from './modules/security/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponent}
 ];
