@@ -1,4 +1,6 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  // data for pipes
+  today: number = Date.now();
+
+  constructor(
+    public router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  /**
+   * Navigate to the given URL using the Angular router.
+   * @param url - url to navigate to
+   */
+  navegateTo(url: string) {
+    this.router.navigate([url]);
   }
 
 }

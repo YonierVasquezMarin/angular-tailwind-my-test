@@ -11,7 +11,7 @@ export class LocalStorageService {
     return localStorage.getItem('user') !== null;
   }
 
-  logginUser(user: any): void {
+  loginUser(user: any): void {
     localStorage.setItem('user', JSON.stringify(user));
   }
 
