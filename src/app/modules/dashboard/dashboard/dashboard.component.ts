@@ -22,8 +22,4 @@ export class DashboardComponent implements OnInit {
     this.router.navigateByUrl('');
   }
 
-  navigateTo(url: string) {
-    this.router.navigateByUrl(url);
-  }
-
 }

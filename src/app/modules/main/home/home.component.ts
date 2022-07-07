@@ -19,12 +19,4 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /**
-   * Navigate to the given URL using the Angular router.
-   * @param url - url to navigate to
-   */
-  navegateTo(url: string) {
-    this.router.navigate([url]);
-  }
-
 }

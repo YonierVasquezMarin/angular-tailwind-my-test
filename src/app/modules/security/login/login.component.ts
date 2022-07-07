@@ -22,6 +22,6 @@ export class LoginComponent implements OnInit {
    */
   activeCredentials() {
     this.authService.loginUser('NATALIA')
-    this.router.navigate(['/dashboard']);
+    this.router.navigateByUrl('/dashboard');
   }
 }
