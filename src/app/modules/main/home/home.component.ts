@@ -24,6 +24,9 @@ export class HomeComponent implements OnInit {
   batteryLevel: number = 0.75;
   myTitle: string = 'tHIs is mIXeD CaSe';
 
+  // data for my own pipes
+  myGender: string = 'M';
+
   constructor(
     public router: Router
   ) { }

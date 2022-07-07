@@ -148,4 +148,13 @@
       <p>El titulo del articulo es {{ myTitle | titlecase }}</p>
     </li>
   </ul>
+
+  <!-- My own pipe -->
+  <h1 class="pipe-title">MyOwnPipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>GenderPipe</span>
+      <p>El genero es {{ myGender | gender:'upper' }}</p>
+    </li>
+  </ul>
 </div>
