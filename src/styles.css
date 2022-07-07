@@ -8,6 +8,10 @@
     @apply text-2xl mb-5;
   }
 
+  .subtitle {
+    @apply text-xl mb-5 mt-7;
+  }
+
   .btns-container {
     @apply flex flex-col w-48;
   }
