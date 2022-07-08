@@ -1,0 +1,153 @@
+<h1 class="title">Prueba de Angular Pipe</h1>
+<p class="mb-3"><strong>Definición:</strong> Los pipe's son usados para transformar datos facílmente.</p>
+
+<!-- Angular pipes -->
+<div class="ml-14">
+
+  <!-- datepipe -->
+  <h1 class="pipe-title">DatePipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>date</span>
+      <p>La fecha de hoy es {{ today | date }}</p>
+    </li>
+    <li>
+      <span>date: 'short'</span>
+      <p>La fecha de hoy es {{ today | date: 'short' }}</p>
+    </li>
+    <li>
+      <span>date: 'shortDate'</span>
+      <p>La fecha de hoy es {{ today | date: 'shortDate' }}</p>
+    </li>
+    <li>
+      <span>date: 'shortTime'</span>
+      <p>La fecha de hoy es {{ today | date: 'shortTime' }}</p>
+    </li>
+    <li>
+      <span>{{ '{ today | date: cccc, LLLL d } of { today | date: yyyy } at { today | date: shortTime }' }}</span>
+      <p>La fecha de hoy es {{ today | date: 'cccc, LLLL d' }} of {{ today | date: 'yyyy' }} at
+        {{ today | date: 'shortTime' }}</p>
+    </li>
+  </ul>
+
+  <!-- currencypipe -->
+  <h1 class="pipe-title">CurrencyPipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>currency</span>
+      <p>Mi ahorro es de {{ money | currency }}</p>
+    </li>
+    <li>
+      <span>currency: 'CAD'</span>
+      <p>Mi ahorro es de {{ money | currency: 'CAD' }}</p>
+    </li>
+    <li>
+      <span>currency: 'USD'</span>
+      <p>Mi ahorro es de {{ money | currency: 'USD' }}</p>
+    </li>
+    <li>
+      <span>currency: 'COP'</span>
+      <p>Mi ahorro es de {{ money | currency: 'COP' }}</p>
+    </li>
+  </ul>
+
+  <!-- numberpipe -->
+  <h1 class="pipe-title">NumberPipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>number</span>
+      <p>El número es {{ mynumber | number }}</p>
+    </li>
+    <li>
+      <span>number: '1.2-5'</span>
+      <p>El número es {{ mynumber | number: '1.2-5' }}</p>
+    </li>
+    <li>
+      <span>number: '1.4-7'</span>
+      <p>El número es {{ mynumber | number: '1.4-7' }}</p>
+    </li>
+    <li>
+      <span>number: '4.2-2'</span>
+      <p>El número es {{ mynumber | number: '4.2-2' }}</p>
+    </li>
+    <li>
+      <span>number: '1.1-5':'fr'</span>
+      <p>El número es {{ mynumber | number: '5.1-5':'fr' }}</p>
+    </li>
+  </ul>
+
+  <!-- pluralpipe -->
+  <h1 class="pipe-title">PluralPipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>i18nPlural: messageMapping</span>
+      <p>Mensajes: {{ messages.length | i18nPlural: messageMapping }}</p>
+    </li>
+    <li>
+      <span>i18nPlural: trafficLightMapping</span>
+      <p>Se debe {{ trafficLight | i18nPlural: trafficLightMapping }}</p>
+    </li>
+  </ul>
+
+  <!-- selectpipe -->
+  <h1 class="pipe-title">SelectPipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>i18nSelect: inviteMap</span>
+      <p>Segun genero se dice {{ gender | i18nSelect: inviteMap }}</p>
+    </li>
+  </ul>
+
+  <!-- jsonpipe -->
+  <h1 class="pipe-title">JsonPipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>Within pipe</span>
+      <p>El objeto es {{ object }}</p>
+    </li>
+    <li>
+      <span>With pipe</span>
+      <p>El objeto es {{ object | json }}</p>
+    </li>
+  </ul>
+
+  <!-- lowercasepipe -->
+  <h1 class="pipe-title">LowerCasePipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>lowercase</span>
+      <p>Mi nombre es {{ myName | lowercase }}</p>
+    </li>
+    <li>
+      <span>lowercase</span>
+      <p>Mi nombre es {{ myName | uppercase }}</p>
+    </li>
+  </ul>
+
+  <!-- percentpipe -->
+  <h1 class="pipe-title">PercentilePipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>percent</span>
+      <p>La bateria está en {{ batteryLevel | percent }}</p>
+    </li>
+  </ul>
+
+  <!-- titlecasepipe -->
+  <h1 class="pipe-title">TitlePipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>titlecase</span>
+      <p>El titulo del articulo es {{ myTitle | titlecase }}</p>
+    </li>
+  </ul>
+
+  <!-- My own pipe -->
+  <h1 class="pipe-title">MyOwnPipe</h1>
+  <ul class="pipe-list">
+    <li>
+      <span>GenderPipe</span>
+      <p>El genero es {{ myGender | gender:'upper' }}</p>
+    </li>
+  </ul>
+</div>

@@ -10,11 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/main/home/home.component';
 import { GenderPipe } from './pipes/gender/gender.pipe';
+import { PipeComponent } from './modules/proof-of-concept/pipe/pipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    PipeComponent,
     GenderPipe
   ],
   imports: [
