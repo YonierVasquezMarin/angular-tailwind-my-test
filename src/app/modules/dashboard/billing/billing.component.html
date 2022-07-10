@@ -1,0 +1,4 @@
+<h1 class="mt-2 text-xl">Facturación</h1>
+<ul class="mt-2 list-disc list-inside">
+  <li *ngFor="let bill of billingData;">{{bill.month}} {{bill.count | currency}}</li>
+</ul>

@@ -8,11 +8,29 @@ import { HomeComponent } from './modules/main/home/home.component';
 import { LoginComponent } from './modules/security/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent, canActivate: [LoginsGuard] },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'proof-of-concept', loadChildren: () => import('./modules/proof-of-concept/proof-of-concept.module').then(m => m.ProofOfConceptModule) },
-  { path: '**', component: PageNotFoundComponent }
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [LoginsGuard]
+  },
+  {
+    path: 'proof-of-concept',
+    loadChildren: () => import('./modules/proof-of-concept/proof-of-concept.module').then(m => m.ProofOfConceptModule)
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
 ];
 
 @NgModule({

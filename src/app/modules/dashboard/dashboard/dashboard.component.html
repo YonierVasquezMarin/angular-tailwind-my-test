@@ -1,6 +1,9 @@
 <h1 class="title">Panel de control</h1>
 
 <div class="btns-container">
-  <button class="btn">Facturación</button>
+  <button class="btn" routerLink="associated-devices">Dispositivos</button>
+  <button class="btn" routerLink="billing">Facturación</button>
   <button class="btn" (click)="closeSession()">Cerrar sesión</button>
 </div>
+
+<router-outlet></router-outlet>

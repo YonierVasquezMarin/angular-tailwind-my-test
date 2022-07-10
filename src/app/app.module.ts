@@ -11,13 +11,19 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/main/home/home.component';
 import { GenderPipe } from './pipes/gender/gender.pipe';
 import { PipeComponent } from './modules/proof-of-concept/pipe/pipe.component';
+import { DashboardComponent } from './modules/dashboard/dashboard/dashboard.component';
+import { AssociatedDevicesComponent } from './modules/dashboard/associated-devices/associated-devices.component';
+import { BillingComponent } from './modules/dashboard/billing/billing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PipeComponent,
-    GenderPipe
+    GenderPipe,
+    DashboardComponent,
+    AssociatedDevicesComponent,
+    BillingComponent
   ],
   imports: [
     BrowserModule,

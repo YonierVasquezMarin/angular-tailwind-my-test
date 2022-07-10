@@ -2,16 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { OptionNotSelectedComponent } from './option-not-selected/option-not-selected.component';
 
 @NgModule({
-  declarations: [
-    DashboardComponent
+  declarations: [ 
+    OptionNotSelectedComponent
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
   ]
 })
 export class DashboardModule { }
