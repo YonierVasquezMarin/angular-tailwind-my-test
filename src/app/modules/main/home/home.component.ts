@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -29,11 +29,15 @@ export class HomeComponent implements OnInit {
 
   constructor(
     public router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private metaService: Meta
   ) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('Tailwind & Angular');
+    this.metaService.addTags([
+      { name: 'decription', content: 'Página principal del proyecto Angular y Tailwind.' },
+    ]);
   }
 
 }
