@@ -1,7 +1,135 @@
-// declaration of variables
+// prueba de importacion de scss
+@use 'm1';
+@use 'sass:math';
+
+// prueba de variables
 $border-color: red;
 $position: justify-center;
 
 #box-color {
   border: 1px solid $border-color;
+}
+
+// prueba de anidamiento
+.element1 {
+  height: 250px;
+  width: 250px;
+  background-color: #f00;
+
+  .element1-1 {
+    height: 100px;
+    width: 100px;
+    background-color: #0f0;
+  }
+
+  .element2 {
+    height: 100px;
+    width: 100px;
+    background-color: #00f;
+
+    .element3 {
+      height: 50px;
+      width: 50px;
+      background-color: #f0f;
+    }
+  }
+}
+
+// prueba de mixin
+
+/// Define box styles base
+///
+/// @param {string} $bg-color
+///   Background color of the box
+@mixin styles-box($bg-color: yellow) {
+  height: 120px;
+  width: 120px;
+  background-color: $bg-color;
+}
+
+.box1 {
+  @include styles-box;
+  border: 5px solid black;
+}
+
+.box2 {
+  @include styles-box(#f00);
+}
+
+.box3 {
+  @include styles-box(#0f0);
+}
+
+// prueba de herencia
+%base-box {
+  height: 120px;
+  width: 120px;
+  background-color: rgb(143, 49, 138);
+}
+
+.boxA {
+  @extend %base-box;
+  border: 5px solid rgb(32, 75, 156);
+}
+
+.boxB {
+  @extend %base-box;
+  border: 5px solid rgb(58, 175, 116);
+}
+
+.boxC {
+  @extend %base-box;
+  border: 5px solid rgb(171, 173, 38);
+}
+
+// prueba de operadores
+.operacion1 {
+  width: 100px + 100px;
+  height: 200px;
+  @apply bg-cyan-600;
+}
+
+.operacion2 {
+  width: 100px * 3;
+  height: 200px;
+  @apply bg-cyan-600;
+}
+
+// prueba de interpolacion
+// $bg-color-box: bg-cyan-600;
+// .interpolacion1 {
+//   width: 100px;
+//   height: 200px;
+// }
+
+// prueba de nesting
+.box-nesting {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+  display: flex;
+  flex: {
+    direction: row;
+    wrap: wrap;
+  };
+}
+
+// prueba declaraciones ocultas
+.hide-decl {
+  height: 100px;
+  width: 100px;
+
+  $bg-red: false;
+  background-color: if($bg-red, red, blue);
+}
+
+// prueba de selector padre
+.parent {
+  height: 100px;
+  width: 100px;
+  background-color: #f00;
+
+  &:hover {
+    background-color: #0f0;
+  }
 }
