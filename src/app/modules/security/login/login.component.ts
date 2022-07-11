@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
@@ -11,17 +12,19 @@ export class LoginComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
-    public router: Router
+    public router: Router,
+    private titleService: Title
   ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Login');
   }
 
   /**
    * Set the user's credentials and navigate to the dashboard page.
    */
   activeCredentials() {
-    this.authService.loginUser('NATALIA')
+    this.authService.loginUser('USER_NAME')
     this.router.navigateByUrl('/dashboard');
   }
 }

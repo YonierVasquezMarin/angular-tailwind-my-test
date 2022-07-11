@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Component({
@@ -27,10 +28,12 @@ export class HomeComponent implements OnInit {
   myGender: string = 'M';
 
   constructor(
-    public router: Router
+    public router: Router,
+    private titleService: Title
   ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Tailwind & Angular');
   }
 
 }

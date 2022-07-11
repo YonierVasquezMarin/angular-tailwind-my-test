@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pipe',
@@ -25,9 +26,12 @@ export class PipeComponent implements OnInit {
   // data for my own pipes
   myGender: string = 'M';
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Prueba de Pipe');
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { BillingData } from 'src/app/models/billing-data.model';
 
 @Component({
@@ -14,9 +15,12 @@ export class BillingComponent implements OnInit {
     { month: 'Marzo', count: 32600 },
   ];
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+  ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Facturación');
   }
 
 }
