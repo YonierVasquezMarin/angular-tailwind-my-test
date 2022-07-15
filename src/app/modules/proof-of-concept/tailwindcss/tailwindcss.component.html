@@ -17,7 +17,7 @@
 
 <!-- styles in group -->
 <div class="bg-black p-2 group hover:bg-white hover:cursor-pointer">
-  <h2 class="group-hover:text-black">Texto interno</h2>
+  <h2 class="group-hover:text-black text-white">Texto interno</h2>
   <div class="h-4 bg-red-500 group-hover:bg-blue-500"></div>
 </div>
 
@@ -79,7 +79,9 @@
 
 <!-- seccion desplegable -->
 <div class="max-w-lg p-8">
-  <details class="open:bg-white bg-slate-900 dark:border-white border-white dark:open:bg-slate-900 open:ring-1 open:ring-black/5 dark:open:ring-white/10 shadow-lg p-6 rounded-lg" open>
+  <details
+    class="open:bg-white bg-slate-900 dark:border-white border-white dark:open:bg-slate-900 open:ring-1 open:ring-black/5 dark:open:ring-white/10 shadow-lg p-6 rounded-lg"
+    open>
     <summary class="text-sm leading-6 text-slate-900 dark:text-white font-semibold select-none">
       Why do they call it Ovaltine?
     </summary>
@@ -114,3 +116,103 @@
 
 <!-- configuration -->
 <div class="h-[100px] w-[100px] bg-primary hover:bg-primary-hover"></div>
+
+<br>
+
+<!-- spacing -->
+<div class="bg-green-500 h-28 w-28"></div>
+
+<br>
+
+<!-- container -->
+<div class="container mx-auto">
+  <p>Container</p>
+  <div class="bg-emerald-500 h-[100px] w-auto"></div>
+</div>
+
+<br>
+
+<!-- columns -->
+<p class="mb-2">Columnas</p>
+<div class="columns-3">
+  <p>Well, let me tell you something, ...</p>
+  <p>Well, let me tell you something, ...</p>
+  <p class="break-after-all">Sure, go ahead, laugh...</p>
+  <p>Well, let me tell you something, ...</p>
+  <p>Well, let me tell you something, ...</p>
+  <p>Well, let me tell you something, ...</p>
+  <p>Well, let me tell you something, ...</p>
+  <p>Well, let me tell you something, ...</p>
+  <p>Maybe we can live without...</p>
+  <p>Look. If you think this is...</p>
+  <p>Maybe we can live without...</p>
+  <p>Look. If you think this is...</p>
+  <p>Maybe we can live without...</p>
+  <p>Look. If you think this is...</p>
+</div>
+
+<br>
+
+<!-- box decoration -->
+<span class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 block">
+  Hello<br>
+  World
+</span>
+<br>
+<span class="box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 block">
+  Hello<br>
+  World
+</span>
+
+<br>
+
+<!-- box sizing -->
+<div class="h-[100px] w-[100px] bg-green-500 border-black border-[4px] box-border"></div>
+<div class="h-[100px] w-[100px] bg-green-500 border-black border-[4px] box-content"></div>
+
+<br>
+
+<!-- grid -->
+<div class="grid gap-4 grid-cols-3">
+  <div *ngFor="let num of nums;" class="box-grid">{{num}}</div>
+</div>
+
+<br>
+
+<!-- tables -->
+<div class="table w-full">
+  <div class="table-header-group pb-3">
+    <div class="table-row">
+      <div class="table-cell text-left">Song</div>
+      <div class="table-cell text-left">Artist</div>
+      <div class="table-cell text-left">Year</div>
+    </div>
+  </div>
+  <div class="table-row-group">
+    <div class="table-row odd:bg-blue-500 even:bg-red-400">
+      <div class="table-cell">The Sliding Mr. Bones (Next Stop, Pottersville)</div>
+      <div class="table-cell">Malcolm Lockyer</div>
+      <div class="table-cell">1961</div>
+    </div>
+    <div class="table-row odd:bg-blue-500 even:bg-red-400">
+      <div class="table-cell">Witchy Woman</div>
+      <div class="table-cell">The Eagles</div>
+      <div class="table-cell">1972</div>
+    </div>
+    <div class="table-row odd:bg-blue-500 even:bg-red-400">
+      <div class="table-cell">Shining Star</div>
+      <div class="table-cell">Earth, Wind, and Fire</div>
+      <div class="table-cell">1975</div>
+    </div>
+    <div class="table-row odd:bg-blue-500 even:bg-red-400">
+      <div class="table-cell">Shining Star</div>
+      <div class="table-cell">Earth, Wind, and Fire</div>
+      <div class="table-cell">1975</div>
+    </div>
+    <div class="table-row odd:bg-blue-500 even:bg-red-400">
+      <div class="table-cell">Shining Star</div>
+      <div class="table-cell">Earth, Wind, and Fire</div>
+      <div class="table-cell">1975</div>
+    </div>
+  </div>
+</div>

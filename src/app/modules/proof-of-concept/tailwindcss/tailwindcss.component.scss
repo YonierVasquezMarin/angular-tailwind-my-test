@@ -6,3 +6,6 @@
   background-color: yellow;
 }
 
+.box-grid {
+  @apply h-16 w-auto bg-red-500 font-bold flex flex-col items-center justify-center sm:hover:bg-red-600 rounded-lg;
+}

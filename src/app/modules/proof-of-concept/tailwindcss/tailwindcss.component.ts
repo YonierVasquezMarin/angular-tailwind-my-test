@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TailwindcssComponent implements OnInit {
 
-  constructor() { }
+  nums: number[] = [];
+
+  constructor() {
+    for (let i = 1; i <= 10; i++) {
+      this.nums.push(i);
+    }
+  }
 
   ngOnInit(): void {
   }
